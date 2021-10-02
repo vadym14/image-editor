@@ -58,7 +58,6 @@ class GuidelinesHandler extends BaseHandler {
       }
 
       const isInRange = (value1: number, value2: number) => {
-        console.log('IS IN RANGE')
         value1 = Math.round(value1)
         value2 = Math.round(value2)
         for (let i = value1 - aligningLineMargin, len = value1 + aligningLineMargin; i <= len; i++) {

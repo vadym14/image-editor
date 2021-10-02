@@ -1,8 +1,4 @@
-import {
-  // FabricCanvas,
-  HandlerOptions,
-  RootHandlerOptions,
-} from '../common/interfaces'
+import { HandlerOptions, RootHandlerOptions } from '../common/interfaces'
 import { PROPERTIES_TO_INCLUDE } from '../common/constants'
 import CanvasHandler from './CanvasHandler'
 import EventsHandler from './EventsHandler'
@@ -14,6 +10,7 @@ import PersonalizationHandler from './PersonalizationHandler'
 import TemplateHandler from './TemplateHandler'
 import ScrollbarHandler from './ScrollbarHandler'
 import GuidelinesHandler from './GuidelinesHandler'
+import DragAndDropHandler from './DragAndDropHandler'
 class Handlers {
   public frameHandler: FrameHandler
   public eventsHandler: EventsHandler
@@ -25,8 +22,9 @@ class Handlers {
   public scrollbarHandler: ScrollbarHandler
   // public canvas: FabricCanvas;
   public propertiesToInclude: string[]
-  private personalizationHandler: PersonalizationHandler
-  private guidelinesHandler: GuidelinesHandler
+  public dragAndDropHandler: DragAndDropHandler
+  public personalizationHandler: PersonalizationHandler
+  public guidelinesHandler: GuidelinesHandler
   constructor(props: RootHandlerOptions) {
     this.propertiesToInclude = PROPERTIES_TO_INCLUDE
     const handlerOptions: HandlerOptions = {
@@ -43,6 +41,8 @@ class Handlers {
     this.personalizationHandler = new PersonalizationHandler(handlerOptions)
     this.templateHandler = new TemplateHandler(handlerOptions)
     this.scrollbarHandler = new ScrollbarHandler(handlerOptions)
+    // this.guidelinesHandler = new GuidelinesHandler(handlerOptions)
+    this.dragAndDropHandler = new DragAndDropHandler(handlerOptions)
     // this.guidelinesHandler = new GuidelinesHandler(handlerOptions)
   }
 

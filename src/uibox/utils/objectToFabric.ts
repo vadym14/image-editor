@@ -63,6 +63,7 @@ class ObjectToFabric {
         const baseOptions = this.getBaseOptions(item, options)
         const src = item.metadata.src
         const image: any = await loadImageFromURL(src)
+
         const { width, height } = baseOptions
         if (!width || !height) {
           baseOptions.width = image.width
@@ -145,13 +146,13 @@ class ObjectToFabric {
   }
 
   getBaseOptions(item, options) {
-    const { left, top, width, height, scaleX, scaleY } = item
+    const { left, top, width, height, scaleX, scaleY, absoluteCoords } = item
     let metadata = item.metadata ? item.metadata : {}
     const { fill, angle, originX, originY } = metadata
     let baseOptions = {
       angle: angle ? angle : 0,
-      top: options.top + top * SCALE_FACTOR,
-      left: options.left + left * SCALE_FACTOR,
+      top: absoluteCoords ? top : options.top + top * SCALE_FACTOR,
+      left: absoluteCoords ? left : options.left + left * SCALE_FACTOR,
       width: width * SCALE_FACTOR,
       height: height * SCALE_FACTOR,
       originX: originX || 'left',
