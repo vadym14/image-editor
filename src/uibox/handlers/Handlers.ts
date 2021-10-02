@@ -43,7 +43,7 @@ class Handlers {
     this.personalizationHandler = new PersonalizationHandler(handlerOptions)
     this.templateHandler = new TemplateHandler(handlerOptions)
     this.scrollbarHandler = new ScrollbarHandler(handlerOptions)
-    this.guidelinesHandler = new GuidelinesHandler(handlerOptions)
+    // this.guidelinesHandler = new GuidelinesHandler(handlerOptions)
   }
 
   destroy = () => {}
