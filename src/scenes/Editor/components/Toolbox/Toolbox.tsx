@@ -1,4 +1,4 @@
-import { useEditorContext } from '@/uibox'
+import { useEditorContext } from '@/sdk'
 import { styled } from 'baseui'
 import ToolboxItems from './ToolboxItems'
 

@@ -2,9 +2,8 @@ import Icons from '../../../icons'
 import { Button, SHAPE, KIND, SIZE } from 'baseui/button'
 import { StatefulPopover, PLACEMENT } from 'baseui/popover'
 import { Slider } from 'baseui/slider'
-import { useHandlers } from '@/uibox'
+import { useHandlers, useActiveObject } from '@/sdk'
 import { useEffect, useState } from 'react'
-import { useActiveObject } from '@/uibox/hooks/useActiveObject'
 
 function Opacity() {
   const [value, setValue] = useState([1])

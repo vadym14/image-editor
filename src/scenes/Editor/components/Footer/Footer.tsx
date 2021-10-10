@@ -3,7 +3,7 @@ import { styled } from 'baseui'
 import { Plus, CheckIndeterminate } from 'baseui/icon'
 import { StatefulPopover, PLACEMENT } from 'baseui/popover'
 import { Scrollbars } from 'react-custom-scrollbars'
-import { useEditorContext, useHandlers } from '@/uibox'
+import { useEditorContext, useHandlers } from '@/sdk'
 
 const Container = styled('div', props => ({
   backgroundColor: '#f6f7f9',

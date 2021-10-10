@@ -2,10 +2,13 @@ import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
 import Providers from './Providers'
 import Routes from './Routes'
+import Container from './Container'
 
 ReactDOM.render(
   <Providers>
-    <Routes />
+    <Container>
+      <Routes />
+    </Container>
   </Providers>,
   document.getElementById('root')
 )

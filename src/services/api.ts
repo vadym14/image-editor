@@ -1,6 +1,6 @@
-import { Template } from '@/uibox/common/interfaces'
 import axios, { AxiosInstance } from 'axios'
 
+type Template = any
 class ApiService {
   base: AxiosInstance
   constructor() {

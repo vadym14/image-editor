@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import { Provider as StyletronProvider } from 'styletron-react'
 import { LightTheme, BaseProvider } from 'baseui'
-import { EditorProvider } from './uibox'
+import { EditorProvider } from './sdk'
 import { AppProvider } from './contexts/AppContext'
 const engine = new Styletron()
 

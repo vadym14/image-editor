@@ -1,4 +1,4 @@
-import { useHandlers } from '@/uibox'
+import { useHandlers } from '@/sdk'
 import { Scrollbars } from 'react-custom-scrollbars'
 import { Input } from 'baseui/input'
 import Icons from '@components/icons'

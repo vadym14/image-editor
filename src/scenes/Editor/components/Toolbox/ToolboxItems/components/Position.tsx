@@ -1,36 +1,10 @@
 import Icons from '../../../icons'
 import { Button, KIND, SIZE } from 'baseui/button'
 import { StatefulPopover, PLACEMENT } from 'baseui/popover'
-
-import { useHandlers } from '@/uibox'
-// import { useEffect, useState } from 'react'
-// import { useActiveObject } from '@/uibox/hooks/useActiveObject'
-// import { useEffect } from 'react'
-// import { useEditorContext } from '@/uibox'
+import { useHandlers } from '@/sdk'
 
 function Position() {
-  // const [value, setValue] = useState([1])
-  // const activeObject = useActiveObject()
-  // const { canvas } = useEditorContext()
   const handlers = useHandlers()
-
-  // useEffect(() => {
-  //   updateOptions(activeObject)
-  // }, [activeObject])
-
-  // useEffect(() => {
-  //   handlers.canvasHandler.canvas.on('history:changed', () => {
-  //     updateOptions(activeObject)
-  //   })
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [handlers])
-
-  // const updateOptions = (object: fabric.IObjectOptions) => {
-  //   const objectIndex = canvas.getObjects().findIndex(o => o === object)
-  //   console.log({ objectIndex })
-  //   // const updatedValue = [object.opacity * 100]
-  //   // setValue(updatedValue)
-  // }
 
   return (
     <StatefulPopover

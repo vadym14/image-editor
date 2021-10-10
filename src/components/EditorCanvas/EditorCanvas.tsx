@@ -1,4 +1,4 @@
-import Editor from '@/uibox'
+import Editor from '@/sdk'
 
 function EditorCanvas() {
   return (

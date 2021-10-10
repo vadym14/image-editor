@@ -21,6 +21,7 @@ import ToFront from './ToFront'
 import Forward from './Forward'
 import ToBack from './ToBack'
 import Backward from './Backward'
+import Grid from './Grid'
 class Icons {
   static Background = Background
   static Elements = Elements
@@ -45,6 +46,7 @@ class Icons {
   static Forward = Forward
   static ToBack = ToBack
   static Backward = Backward
+  static Grid = Grid
 }
 
 export default Icons

@@ -1,11 +1,11 @@
 import useAppContext from '@/hooks/useAppContext'
 import api from '@/services/api'
 import { useEffect } from 'react'
-import EditorCanvas from './components/EditorCanvas'
 import Navbar from './components/Navbar'
 import Panels from './components/Panels'
 import Toolbox from './components/Toolbox'
 import Footer from './components/Footer'
+import Editor from '@/sdk'
 
 function App() {
   const { setTemplates, setShapes } = useAppContext()
@@ -32,7 +32,7 @@ function App() {
         <Panels />
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
           <Toolbox />
-          <EditorCanvas />
+          <Editor />
           <Footer />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import useAppContext from '@/hooks/useAppContext'
-import { useEditorContext } from '@/uibox'
+import { useEditorContext } from '@/sdk'
 import { styled } from 'baseui'
 import { useEffect } from 'react'
 import PanelItems from './PanelItems'

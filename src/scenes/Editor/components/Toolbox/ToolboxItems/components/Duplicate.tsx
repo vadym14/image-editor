@@ -1,4 +1,4 @@
-import { useHandlers } from '@/uibox'
+import { useHandlers } from '@/sdk'
 import { Button, SHAPE, KIND, SIZE } from 'baseui/button'
 import Icons from '../../../icons'
 
