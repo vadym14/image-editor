@@ -39,7 +39,7 @@ function Container({ children }) {
     loadFonts()
     setTimeout(() => {
       setLoaded(true)
-    }, 2500)
+    }, 100)
   }, [])
 
   const loadFonts = () => {

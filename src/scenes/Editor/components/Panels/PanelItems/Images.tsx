@@ -7,7 +7,7 @@ import { useHandlers } from '@/sdk'
 import { defaultImages } from '@/constants/contants'
 
 function Images() {
-  const [search, setSearch] = useState('')
+  const [query, setQuery] = useState("")
   const [images] = useState<any[]>(defaultImages)
 
   const handlers = useHandlers()
@@ -20,15 +20,22 @@ function Images() {
     handlers.objectsHandler.create(options)
   }
 
+  const isFiltered = (element: string) => {
+    const ele = element.toLowerCase()
+    const res = query.toLowerCase()
+    return ele.includes(res) || ele === res
+  }
+
   return (
     <div style={{ display: 'flex', height: '100%', flexDirection: 'column' }}>
       <div style={{ padding: '2rem 2rem' }}>
         <Input
           startEnhancer={() => <Icons.Search size={18} />}
-          value={search}
-          onChange={e => setSearch((e.target as any).value)}
+          value={query}
+          onChange={e => setQuery((e.target as any).value)}
           placeholder="Search components"
           clearOnEscape
+          clearable={true}
         />
       </div>
       <div style={{ flex: 1 }}>
@@ -41,7 +48,8 @@ function Images() {
               gridTemplateColumns: '1fr 1fr 1fr 1fr',
             }}
           >
-            {images.map(img => (
+            {images
+            .filter((image) => isFiltered(image.name)).map(img => (
               <div
                 key={img.id}
                 style={{
